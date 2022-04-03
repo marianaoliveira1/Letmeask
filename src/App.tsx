@@ -1,6 +1,8 @@
+import { Home } from "./pages/Home";
+
 function App() {
   return (
-  <button>Clique aqui</button>
+  <Home />
   );
 }
 
