@@ -8,18 +8,18 @@ import googleImg from '../assets/images/google-icon.svg';
 
 import '../styles/auth.scss';
 import { Button } from '../components/Button';
+import { useAuth } from '../hooks/useAuth';
 
 export function Home() {
     const history = useHistory();
+    const {user, singInWithGoogle} = useAuth();   
 
-    function handleCreateRoom() {
-        const provider = new firebase.auth.GoogleAuthProvider();
+    async function handleCreateRoom() {
+        if(!user) {
+            await singInWithGoogle()
+        }
 
-        auth.signInWithPopup(provider).then(result => {
-            console.log(result);
-        })
-
-        // history.push('/rooms/news');
+     history.push('/rooms/news');
     }
 
     return (
