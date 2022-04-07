@@ -1,4 +1,5 @@
-import firebase from "firebase/compat";
+// import firebase from "firebase/compat";
+import firebase from "firebase/compat/app";
 import { createContext,ReactNode, useEffect, useState } from "react";
 import { auth } from "../services/firebase";
 
@@ -6,20 +7,22 @@ type User = {
     id: string;
     name: string;
     avatar: string;
-  }
+};
   
-  type AuthContextType = {
+type AuthContextType = {
     user: User | undefined;
     singInWithGoogle: () => Promise<void>;
-  }
+};
   
 type AuthContextProps = {
     children: ReactNode;
-}
+};
 
 export const AuthContext = createContext({} as AuthContextType);
 
-const [user, setUser] = useState<User>();
+
+export function AuthContextProvider(props:AuthContextProps) {
+  const [user, setUser] = useState<User>();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
@@ -64,7 +67,6 @@ const [user, setUser] = useState<User>();
         }
   }
 
-export function AuthContextProvider(props:AuthContextProps) {
     return(
         <AuthContext.Provider value={{ user, singInWithGoogle }}>
             {props.children}
