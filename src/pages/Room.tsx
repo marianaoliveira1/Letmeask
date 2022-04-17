@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import logoImg from '../assets/images/logo.svg';
 import { Button } from '../components/Button';
+import { Question } from '../components/Questions';
 import { RoomCode } from '../components/RoomCode';
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
@@ -125,7 +126,19 @@ type FirebaseQuestions = Record<string, {
               <Button type="submit" disabled={!user}>Enviar pergunta</Button>
             </div>
           </form>
-          {JSON.stringify(questions)}
+          <div className="question-list">
+            {
+              questions.map(questions => {
+                return (
+                  <Question
+                  key={questions.id}
+                    content={questions.content}
+                    author={questions.author}
+                  />
+                )
+              })
+            }
+          </div>
         </main>
       </div>
     );
