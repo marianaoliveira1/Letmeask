@@ -11,6 +11,13 @@
             >img {
                 max-width: 95px;
             }
+            >div {
+                display: flex;
+                gap: 20px;
+                button {
+                    height: 40px;
+                }
+            }
         }
     }
     main {
