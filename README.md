@@ -39,8 +39,6 @@ Aplicação desenvolvida durante Next Level Week (nlw) Together da Rocketseat, q
 </div>
 <br />
 
-## 🌐 Preview
-
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -48,3 +46,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - ReactJs
 - Firebase
 - Typescript
+- SCSS
