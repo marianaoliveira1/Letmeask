@@ -2,7 +2,6 @@
 
 ## 💻 Projeto
 
-<<<<<<< HEAD
 Aplicação desenvolvida durante Next Level Week (nlw) Together da Rocketseat, que consiste em criar uma sala, fazer perguntas e os demais usuários responderem sobre o assunto 
 
 - Cadastro como usuário
@@ -13,8 +12,6 @@ Aplicação desenvolvida durante Next Level Week (nlw) Together da Rocketseat, q
   - Criar uma sala
   - Excluir, marcar como respondida e da preferência nas perguntas
   - Encerrar sala
-
-<br />
 
 ## 🌐 Preview
 <div> 
@@ -40,14 +37,9 @@ Aplicação desenvolvida durante Next Level Week (nlw) Together da Rocketseat, q
     <p>Tela de visão de amdin </p>
     <img src="./imagens/visao-admin.png">
 </div>
-
-
-=======
-Aplicação desenvolvida durante a nlw
 <br />
 
 ## 🌐 Preview
->>>>>>> 51db93d0855eb83a0e3320663423df21c97c9312
 
 ## 🚀 Tecnologias
 
